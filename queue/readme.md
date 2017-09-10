@@ -5,4 +5,6 @@ Implementasikan sebuah *unique queue* yang mempunyai *fixed size*, *operation si
 
 Implementasi harus memenuhi syarat dari *unit testing* yang telah disiapkan.
 
+
+Saya belum mampu untuk memahami interface di golang. saya akan belajar lagi untuk hal ini.
     

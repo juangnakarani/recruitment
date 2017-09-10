@@ -18,4 +18,22 @@ ilustrasi:
 ```
 grab -concurrent_limit=2 -output=/home/bayu/museum 
 ```
+aplikasi ini terdiri dari dua macam struct:
+1. Data -> terdiri dari array of Museum
+2. Museum -> detail field dari API
+
+data di ambil menggunakan http client request, hasil dari JSON di decode menjadi string.
+hal spesial yang saya temui disini adalah tidak dapat langsung unmarshal json dengan method ```json.Unmarshal``` .
+Awalnya saya sudah menyerah :) tapi saya coba untuk membuat server sendiri dengan content-type json yang persis dengan API di museum (file: concurrenserver.go)
+Alhasil content json yang saya serve sendiri bisa di decode oleh standart paket golang namun akhirnya ketemu dengan Byte Order Mark untuk decode API museum yg mungkin saja menggunakan BOM unicode.
+flow process dari function ```getDataMuseum(kodeKabKota string)``` :
+1. get json dari API
+2. olahdata untuk bisa di write di paket ```"encoding/csv"```
+3. write csv to file sesuai kota masing-masing.
+
+Saya belum bisa menggunakan os argument untuk penerapan concurrency ini
+
+
+
+
 

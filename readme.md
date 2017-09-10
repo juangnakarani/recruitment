@@ -14,3 +14,9 @@
 [Problem 3: Folder Compare](https://github.com/galihrivanto/recruitment/tree/master/compare)
 
 [Problem 4: Concurrency](https://github.com/galihrivanto/recruitment/tree/master/concurrency)
+
+Semua problem solved kecuali nomer 2 tentang Queue. 
+saya akan belajar lagi tentang Queue di golang.
+
+terima kasih.
+Juang Nakarani
